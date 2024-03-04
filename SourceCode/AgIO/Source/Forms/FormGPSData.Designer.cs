@@ -19,7 +19,8 @@
             }
             base.Dispose(disposing);
         }
-
+		public bool cbxRoll { get { return rollCbx.Checked; } }
+        public bool cbxHeading { get { return headingCbx.Checked; } }
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -76,6 +77,9 @@
             this.lblIMURoll = new System.Windows.Forms.Label();
             this.tboxKSXT = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.headingCbx = new System.Windows.Forms.CheckBox();
+            this.rollCbx = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // timer1
@@ -380,7 +384,7 @@
             this.tboxVTG.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxVTG.Name = "tboxVTG";
             this.tboxVTG.ReadOnly = true;
-            this.tboxVTG.Size = new System.Drawing.Size(398, 21);
+            this.tboxVTG.Size = new System.Drawing.Size(726, 21);
             this.tboxVTG.TabIndex = 497;
             this.tboxVTG.Text = "$GPVTG,0,T,034.4,M,1,N,1.852,K";
             // 
@@ -394,7 +398,7 @@
             this.tboxGGA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxGGA.Name = "tboxGGA";
             this.tboxGGA.ReadOnly = true;
-            this.tboxGGA.Size = new System.Drawing.Size(493, 21);
+            this.tboxGGA.Size = new System.Drawing.Size(726, 21);
             this.tboxGGA.TabIndex = 498;
             this.tboxGGA.Text = "$GPGGA,055129.00,5326.1729618,N,111,09.6028200,W,4,12,0.9,300,M,46.9,M,,,";
             // 
@@ -408,7 +412,7 @@
             this.tboxHDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxHDT.Name = "tboxHDT";
             this.tboxHDT.ReadOnly = true;
-            this.tboxHDT.Size = new System.Drawing.Size(398, 21);
+            this.tboxHDT.Size = new System.Drawing.Size(726, 21);
             this.tboxHDT.TabIndex = 499;
             this.tboxHDT.Text = "$GNHDT,123.456,T * 00";
             // 
@@ -422,7 +426,7 @@
             this.tboxAVR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxAVR.Name = "tboxAVR";
             this.tboxAVR.ReadOnly = true;
-            this.tboxAVR.Size = new System.Drawing.Size(493, 21);
+            this.tboxAVR.Size = new System.Drawing.Size(726, 21);
             this.tboxAVR.TabIndex = 500;
             this.tboxAVR.Text = "$PTNL,AVR,145331.50,+35.9990,Yaw,-7.8209,Tilt,-0.4305,Roll,444.232,3,1.2,17 * 03";
             // 
@@ -436,7 +440,7 @@
             this.tboxPAOGI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxPAOGI.Name = "tboxPAOGI";
             this.tboxPAOGI.ReadOnly = true;
-            this.tboxPAOGI.Size = new System.Drawing.Size(493, 21);
+            this.tboxPAOGI.Size = new System.Drawing.Size(726, 21);
             this.tboxPAOGI.TabIndex = 504;
             this.tboxPAOGI.Text = "$PAOGI,055129.00,5326.1729618,N,111,09.6028200,W,4,12,0.9,300,M,46.9,M,,,";
             // 
@@ -450,7 +454,7 @@
             this.tboxHPD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxHPD.Name = "tboxHPD";
             this.tboxHPD.ReadOnly = true;
-            this.tboxHPD.Size = new System.Drawing.Size(493, 21);
+            this.tboxHPD.Size = new System.Drawing.Size(726, 21);
             this.tboxHPD.TabIndex = 510;
             this.tboxHPD.Text = "$PTNL,AVR,145331.50,+35.9990,Yaw,-7.8209,Tilt,-0.4305,Roll,444.232,3,1.2,17 * 03";
             // 
@@ -514,7 +518,7 @@
             this.tboxPANDA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxPANDA.Name = "tboxPANDA";
             this.tboxPANDA.ReadOnly = true;
-            this.tboxPANDA.Size = new System.Drawing.Size(493, 21);
+            this.tboxPANDA.Size = new System.Drawing.Size(726, 21);
             this.tboxPANDA.TabIndex = 518;
             this.tboxPANDA.Text = "$PANDA,145331.50,+35.9990,Yaw,-7.8209,Tilt,-0.4305,Roll,444.232,3,1.2,17 * 03";
             // 
@@ -644,7 +648,7 @@
             this.tboxKSXT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tboxKSXT.Name = "tboxKSXT";
             this.tboxKSXT.ReadOnly = true;
-            this.tboxKSXT.Size = new System.Drawing.Size(493, 21);
+            this.tboxKSXT.Size = new System.Drawing.Size(726, 21);
             this.tboxKSXT.TabIndex = 528;
             // 
             // label13
@@ -658,12 +662,44 @@
             this.label13.Size = new System.Drawing.Size(28, 13);
             this.label13.TabIndex = 527;
             this.label13.Text = "SXT";
+            //
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(550, 8);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(116, 18);
+            this.label18.TabIndex = 529;
+            this.label18.Text = "Kalman Filters";
+            // 
+            // headingCbx
+            // 
+            this.headingCbx.AutoSize = true;
+            this.headingCbx.Location = new System.Drawing.Point(553, 40);
+            this.headingCbx.Name = "headingCbx";
+            this.headingCbx.Size = new System.Drawing.Size(88, 22);
+            this.headingCbx.TabIndex = 530;
+            this.headingCbx.Text = "Heading";
+            this.headingCbx.UseVisualStyleBackColor = true;
+            // 
+            // rollCbx
+            // 
+            this.rollCbx.AutoSize = true;
+            this.rollCbx.Location = new System.Drawing.Point(553, 69);
+            this.rollCbx.Name = "rollCbx";
+            this.rollCbx.Size = new System.Drawing.Size(57, 22);
+            this.rollCbx.TabIndex = 531;
+            this.rollCbx.Text = "Roll";
+            this.rollCbx.UseVisualStyleBackColor = true;
             // 
             // FormGPSData
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(541, 357);
+            this.ClientSize = new System.Drawing.Size(774, 357);
+            this.Controls.Add(this.rollCbx);
+            this.Controls.Add(this.headingCbx);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.tboxKSXT);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblIMURoll);
@@ -774,5 +810,8 @@
         private System.Windows.Forms.Label lblIMURoll;
         private System.Windows.Forms.TextBox tboxKSXT;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox headingCbx;
+        private System.Windows.Forms.CheckBox rollCbx;
     }
 }
