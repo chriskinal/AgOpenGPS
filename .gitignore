@@ -364,7 +364,3 @@ Program/
 Support/TeensyModules/Firmware/Autosteer_gps_teensy_v5_5/__vm/.Autosteer_gps_teensy_v5_5.vsarduino.h
 __vm/
 *.zip
-SourceCode/.DS_Store
-SourceCode/AgIO/.DS_Store
-SourceCode/AgIO/Source/.DS_Store
-.DS_Store
