@@ -327,7 +327,7 @@ namespace AgIO
 
                 int.TryParse(words[11], NumberStyles.Float, CultureInfo.InvariantCulture, out headingQuality);
 
-                if (headingQuality == 3)   // roll only when rtk 
+                if (headingQuality >= 2)   // roll only when rtk 
                 {
                     roll = (float)(rollK);
                     rollData = rollK;
